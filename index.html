@@ -416,21 +416,28 @@
 
 <body class="antialiased">
 
-  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300 relative overflow-hidden" id="navbar">
+    <!-- Imagen de fondo tipo silueta transparente -->
+    <div class="absolute inset-0 w-full h-full opacity-15 pointer-events-none transform scale-110" style="background-image: url('assets/cabecera.png'); background-size: cover; background-position: center; mix-blend-mode: multiply; z-index: 0;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex justify-between items-center h-20">
         <a href="#inicio" class="flex items-center gap-3 group">
-          <img src="assets/cabecera.png" alt="Club de Ajedrez Alcalá" class="h-10 w-auto">
+          <img src="assets/logo.png" alt="Club de Ajedrez Alcalá" class="nav-logo-img">
+          <div class="flex flex-col">
+            <span class="text-[0.7rem] uppercase tracking-widest text-gray-500 font-bold">Alcalá de Henares</span>
+            <span class="font-serif font-bold text-lg text-pizarra leading-tight">Club de Ajedrez</span>
+          </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#club" class="text-sm font-semibold text-gray-600 hover:text-granate transition">El Club</a>
-          <a href="#escuela" class="text-sm font-semibold text-gray-600 hover:text-granate transition">Escuela</a>
-          <a href="#noticias" class="text-sm font-semibold text-gray-600 hover:text-granate transition"
+        <nav class="hidden md:flex items-center gap-8 text-pizarra">
+          <a href="#club" class="text-sm font-semibold hover:text-granate transition relative z-10">El Club</a>
+          <a href="#escuela" class="text-sm font-semibold hover:text-granate transition relative z-10">Escuela</a>
+          <a href="#noticias" class="text-sm font-semibold hover:text-granate transition relative z-10"
             onclick="closeArticleView()">Noticias</a>
-          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-granate transition" title="Panel de Administración">⚙️ Admin</a>
+          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-granate transition relative z-10" title="Panel de Administración">⚙️ Admin</a>
           <a href="#contacto"
-            class="text-sm font-bold bg-gradient-to-r from-oro to-oro-dark text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+            class="text-sm font-bold bg-gradient-to-r from-oro to-oro-dark text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all relative z-10">
             Hazte Socio
           </a>
         </nav>
