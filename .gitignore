@@ -1,0 +1,10 @@
+node_modules/
+migracion-ajedrez/
+.env
+firebase-adminsdk.json
+push_to_github.bat
+push_simple.bat
+git_log.txt
+server_stdout.log
+server_stderr.log
+test_output.txt
