@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -88,6 +89,73 @@
       background: linear-gradient(to bottom, rgba(58, 21, 21, 0.8), rgba(58, 21, 21, 0.8));
       z-index: 1;
       pointer-events: none;
+    }
+
+    /* Mobile Menu styles */
+    .mobile-menu-btn {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 20;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav-logo-img {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: #4e1c1c;
+      z-index: 100;
+      transition: right 0.3s ease-in-out;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    .mobile-menu-drawer.active {
+      right: 0;
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      z-index: 90;
+      display: none;
+    }
+
+    .mobile-menu-overlay.active {
+      display: block;
+    }
+
+    .mobile-link {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .hero-section {
@@ -484,9 +552,33 @@
             Hazte Socio
           </a>
         </nav>
+
+        <!-- Botón Menú Móvil -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </div>
   </header>
+
+  <!-- Menú Móvil (Drawer) -->
+  <div class="mobile-menu-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <div class="flex justify-between items-center mb-8">
+      <span class="text-white font-bold">Menú</span>
+      <div class="text-white text-2xl cursor-pointer" onclick="toggleMobileMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <a href="#club" class="mobile-link" onclick="toggleMobileMenu()">El Club</a>
+    <a href="#escuela" class="mobile-link" onclick="toggleMobileMenu()">Escuela</a>
+    <a href="#noticias" class="mobile-link" onclick="toggleMobileMenu()">Noticias</a>
+    <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="mobile-link" onclick="toggleMobileMenu()">⚙️ Admin</a>
+    <a href="#contacto" class="btn-cta text-center py-3 mt-4" onclick="toggleMobileMenu()">
+      Hazte Socio
+    </a>
+  </div>
+
 
   <main>
     <section id="inicio" class="relative min-h-[90vh] flex items-center pt-20 hero-section">
@@ -788,6 +880,20 @@
   </footer>
 
   <script>
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      const overlay = document.getElementById('mobileOverlay');
+      drawer.classList.toggle('active');
+      overlay.classList.toggle('active');
+      
+      // Bloquear scroll del body cuando el menú está abierto
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
     // Scroll Navbar - transitions from transparent (over hero) to solid dark
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
