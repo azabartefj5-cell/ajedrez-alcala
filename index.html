@@ -58,9 +58,36 @@
     }
 
     .glass-nav {
-      background: rgba(245, 241, 234, 0.9);
+      background-color: #fff;
+      background-image: url('assets/silueta.jpg');
+      background-position: center bottom;
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      border-bottom: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-nav.scrolled {
+      background-color: #fff;
+      background-image: url('assets/silueta.jpg');
+      background-position: center bottom;
+      background-repeat: repeat-x;
+      background-size: auto 100%;
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(122, 31, 43, 0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Dark overlay on top of skyline */
+    .header-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(58, 21, 21, 0.8), rgba(58, 21, 21, 0.8));
+      z-index: 1;
+      pointer-events: none;
     }
 
     .hero-section {
@@ -90,7 +117,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(34, 37, 42, 0.8), rgba(95, 24, 33, 0.6));
+      background: linear-gradient(to bottom, rgba(78, 28, 28, 0.88), rgba(42, 17, 17, 0.82));
       z-index: 1;
     }
 
@@ -338,9 +365,25 @@
 
     /* Navbar logo */
     .nav-logo-img {
-      height: 38px;
+      height: 42px;
       width: auto;
       border-radius: 8px;
+    }
+
+    /* CTA Button (Stitch style) */
+    .btn-cta {
+      background-color: #a67c32;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      background-color: #8e6b42;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(166, 124, 50, 0.4);
     }
 
     /* Transiciones de Vistas */
@@ -416,28 +459,28 @@
 
 <body class="antialiased">
 
-  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300 relative overflow-hidden" id="navbar">
-    <!-- Imagen de fondo tipo silueta transparente -->
-    <div class="absolute inset-0 w-full h-full opacity-15 pointer-events-none transform scale-110" style="background-image: url('assets/cabecera.png'); background-size: cover; background-position: center; mix-blend-mode: multiply; z-index: 0;"></div>
-    
+  <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
+    <!-- Dark overlay on top of skyline -->
+    <div class="header-overlay"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex justify-between items-center h-20">
-        <a href="#inicio" class="flex items-center gap-3 group">
+        <!-- Logo a la izquierda -->
+        <a href="#inicio" class="flex items-center gap-3 group shrink-0">
           <img src="assets/logo.png" alt="Club de Ajedrez Alcalá" class="nav-logo-img">
-          <div class="flex flex-col">
-            <span class="text-[0.7rem] uppercase tracking-widest text-gray-500 font-bold">Alcalá de Henares</span>
-            <span class="font-serif font-bold text-lg text-pizarra leading-tight">Club de Ajedrez</span>
+          <div class="flex flex-col hidden sm:flex">
+            <span class="text-[0.7rem] uppercase tracking-widest text-gray-300 font-bold">Alcalá de Henares</span>
+            <span class="font-serif font-bold text-lg text-white leading-tight">Club de Ajedrez</span>
           </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-8 text-pizarra">
-          <a href="#club" class="text-sm font-semibold hover:text-granate transition relative z-10">El Club</a>
-          <a href="#escuela" class="text-sm font-semibold hover:text-granate transition relative z-10">Escuela</a>
-          <a href="#noticias" class="text-sm font-semibold hover:text-granate transition relative z-10"
+        <!-- Menú a la derecha -->
+        <nav class="hidden md:flex items-center gap-8 shrink-0">
+          <a href="#club" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10">El Club</a>
+          <a href="#escuela" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10">Escuela</a>
+          <a href="#noticias" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10"
             onclick="closeArticleView()">Noticias</a>
-          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-granate transition relative z-10" title="Panel de Administración">⚙️ Admin</a>
-          <a href="#contacto"
-            class="text-sm font-bold bg-gradient-to-r from-oro to-oro-dark text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all relative z-10">
+          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="text-sm font-semibold text-white/50 hover:text-oro transition relative z-10" title="Panel de Administración">⚙️ Admin</a>
+          <a href="#contacto" class="btn-cta text-sm relative z-10">
             Hazte Socio
           </a>
         </nav>
@@ -473,19 +516,19 @@
             </p>
             <div class="flex flex-wrap gap-4">
               <a href="#noticias"
-                class="bg-gradient-to-r from-oro to-oro-dark text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                class="bg-granate text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-white/20"
                 onclick="closeArticleView()">
                 Últimas Noticias
               </a>
               <a href="#escuela"
-                class="bg-white/10 border border-white/30 backdrop-blur-md text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all">
+                class="bg-granate text-white px-8 py-4 rounded-full font-bold border border-white/20 hover:bg-granate-dark transition-all">
                 Escuela Infantil
               </a>
             </div>
           </div>
 
           <div class="lg:col-span-5 hidden md:block">
-            <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+            <div class="bg-granate/60 backdrop-blur-xl border border-oro/40 rounded-3xl p-8 shadow-2xl">
               <h3 class="text-xl font-serif font-bold text-white mb-6 border-b border-white/20 pb-4">Acceso Rápido</h3>
               <ul class="space-y-5">
                 <li class="flex items-start gap-4">
@@ -745,11 +788,14 @@
   </footer>
 
   <script>
-    // Scroll Navbar
+    // Scroll Navbar - transitions from transparent (over hero) to solid dark
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
-      if (window.scrollY > 20) nav.classList.add('shadow-md');
-      else nav.classList.remove('shadow-md');
+      if (window.scrollY > 80) {
+        nav.classList.add('scrolled', 'shadow-md');
+      } else {
+        nav.classList.remove('scrolled', 'shadow-md');
+      }
     });
 
     // Pestañas Escuela
