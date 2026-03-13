@@ -743,93 +743,387 @@
       </div>
     </section>
 
-    <section id="club" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span class="text-granate font-bold tracking-widest uppercase text-sm mb-2 block">El Club</span>
-            <h2 class="font-serif text-4xl font-bold text-pizarra mb-6">Ajedrez en Alcalá de Henares
-            </h2>
-            <div class="text-gray-600 mb-6 text-lg leading-relaxed space-y-4">
-              <p>Formar parte de nuestro club te ofrece múltiples ventajas para disfrutar del ajedrez a todos los niveles:</p>
-              <ul class="list-disc pl-5 space-y-2">
-                <li>Participación en los torneos sociales que organizamos a lo largo de la temporada.</li>
-                <li>Cuotas reducidas en la inscripción de todos nuestros torneos.</li>
-                <li>Uso de nuestras instalaciones en los horarios abiertos a los socios.</li>
-                <li>Participación en los campeonatos autonómicos por equipos organizado por la Federación Madrileña de Ajedrez (FMA).</li>
-                <li>Escuela de ajedrez infantil, con diversos niveles y programa progresivo de estudio.</li>
-              </ul>
+    <section id="club" class="relative bg-white overflow-hidden text-pizarra">
+      <!-- Imagen de cabecera de sección -->
+      <div class="h-64 md:h-80 w-full relative overflow-hidden">
+        <img src="assets/club_header.png" alt="El Club" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/20"></div>
+      </div>
+
+      <div class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="mb-16">
+          <span class="text-granate font-bold tracking-widest uppercase text-sm mb-2 block">Nuestra Historia</span>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-pizarra mb-8">Más de 40 años defendiendo el tablero</h2>
+          
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <p>
+                Nuestro Club empezó su andadura en el año <strong class="text-granate">1980</strong>, fundado por aficionados locales con el sueño de crear un punto de encuentro para el ajedrez en Alcalá. Desde entonces, hemos sido hogar de grandes talentos como el Campeón de Madrid <strong class="text-pizarra">José Candela</strong>.
+              </p>
+              <p>
+                Pero nuestra misión va más allá del juego: hemos llevado el ajedrez a toda la sociedad, desde los más pequeños hasta una labor social pionera con equipos en la cárcel de <strong class="text-pizarra">Alcalá-Meco</strong>. Hoy, seguimos con el gusanillo intacto, promoviendo este deporte como una herramienta de unión y crecimiento.
+              </p>
             </div>
-            
-            <div class="mt-8 bg-marfil border border-oro/30 p-6 rounded-2xl shadow-sm">
-              <h3 class="font-serif font-bold text-xl text-pizarra mb-3">Socios y Competición</h3>
-              <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                <li>Competiciones individuales de la FMA.</li>
-                <li>Liga activa (septiembre a noviembre).</li>
-                <li>Liga Regular (noviembre a marzo).</li>
-                <li>Liga Infantil (octubre a diciembre).</li>
-              </ul>
-              <div class="mt-4">
-                <a href="https://drive.google.com/open?id=0BztVoQU2EjeKYVNrUWFqRVVFejQ" target="_blank" class="inline-flex items-center gap-2 text-granate font-bold hover:text-granate-dark transition">
-                  📄 Descargar Ficha de Socio &rarr;
-                </a>
+            <div class="bg-marfil p-8 rounded-3xl border border-oro/20 shadow-sm relative">
+              <div class="absolute -top-4 -right-4 bg-oro text-white w-20 h-20 rounded-full flex flex-col items-center justify-center shadow-lg transform rotate-12">
+                <span class="text-2xl font-bold leading-none">92</span>
+                <span class="text-[0.6rem] uppercase font-bold">Socios</span>
+              </div>
+              <h3 class="font-serif font-bold text-2xl text-granate mb-4">Un grupo heterogéneo</h3>
+              <p class="text-gray-600 mb-6">
+                Somos una comunidad viva: la mitad de nuestros socios son niños y niñas desde los 5 años, mientras que contamos con veteranos ilustres de más de 80 años como <strong class="text-pizarra">D. Jesús Cabellos "Pichi"</strong>.
+              </p>
+              <div class="flex items-center gap-4 text-sm font-bold text-pizarra">
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-100 italic">"Gente de todas las edades unida por una pasión"</span>
               </div>
             </div>
           </div>
-          <div class="bg-pizarra rounded-3xl p-2 shadow-2xl overflow-hidden relative">
-            <div class="bg-black rounded-2xl overflow-hidden border border-white/10 relative z-10">
-              <iframe src="https://lichess.org/tv/frame?theme=wood&bg=dark" class="w-full h-[400px] border-0"
-                title="Lichess TV" loading="lazy"></iframe>
+        </div>
+
+        <!-- Rejilla de Actividades -->
+        <div class="grid md:grid-cols-3 gap-8 mb-24">
+          <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 bg-granate/10 rounded-2xl flex items-center justify-center text-granate text-2xl mb-6">
+              <i class="fas fa-graduation-cap"></i>
             </div>
+            <h4 class="font-serif font-bold text-xl mb-4 text-pizarra">Formación Continua</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Clases impartidas por profesionales en nuestra sede y diversos centros escolares de toda la ciudad.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 bg-oro/10 rounded-2xl flex items-center justify-center text-oro text-2xl mb-6">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h4 class="font-serif font-bold text-xl mb-4 text-pizarra">Torneos y Eventos</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Desde el Open Internacional "Patrimonio de la Humanidad" hasta entrañables encuentros entre abuelos y nietos.</p>
+          </div>
+          <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:-translate-y-2 transition-all duration-300">
+            <div class="w-14 h-14 bg-pizarra/10 rounded-2xl flex items-center justify-center text-pizarra text-2xl mb-6">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4 class="font-serif font-bold text-xl mb-4 text-pizarra">Competición Federal</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Gestión de equipos en Liga Madrileña, autonómica y nacional, representando a Alcalá por toda España.</p>
+          </div>
+        </div>
+
+        <!-- Call to Action Socio -->
+        <div class="bg-granate rounded-[40px] p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
+          <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+             <i class="fas fa-chess-knight text-[200px]"></i>
+          </div>
+          <div class="max-w-3xl relative z-10">
+            <h3 class="font-serif text-3xl md:text-5xl font-bold mb-8">¿Quieres formar parte del club?</h3>
+            <div class="grid sm:grid-cols-2 gap-6 mb-10">
+              <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Torneos sociales exclusivos</li>
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Cuotas reducidas en inscripciones</li>
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Uso libre de las instalaciones</li>
+              </ul>
+              <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Competición federal por equipos</li>
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Grupos adaptados a tu nivel</li>
+                <li class="flex items-center gap-3 text-sm opacity-90"><i class="fas fa-check text-oro"></i> Acceso a la escuela infantil</li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a href="https://drive.google.com/open?id=0BztVoQU2EjeKYVNrUWFqRVVFejQ" target="_blank" class="bg-oro hover:bg-oro-dark text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all flex items-center gap-2">
+                <i class="fas fa-file-download"></i> Descargar Ficha de Socio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contacto y Sede Integrado -->
+        <div class="mt-24 grid lg:grid-cols-2 gap-16 items-center border-t border-gray-100 pt-16">
+          <div>
+            <h3 class="font-serif text-3xl font-bold text-pizarra mb-6">Sede y Contacto</h3>
+            <div class="space-y-8">
+              <div class="flex gap-6">
+                <div class="w-12 h-12 rounded-full bg-marfil flex items-center justify-center text-granate shrink-0 shadow-sm">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-pizarra">Ubicación</h4>
+                  <p class="text-gray-600">Casa de la Juventud<br>Plaza de la Juventud, s/n<br>Alcalá de Henares, Madrid</p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="w-12 h-12 rounded-full bg-marfil flex items-center justify-center text-granate shrink-0 shadow-sm">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-pizarra">Teléfonos</h4>
+                  <p class="text-gray-600">
+                    <a href="tel:679835390" class="hover:text-granate transition">679 835 390 (Javier)</a><br>
+                    <a href="tel:684027857" class="hover:text-granate transition">684 027 857 (Wilbert)</a>
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="w-12 h-12 rounded-full bg-marfil flex items-center justify-center text-granate shrink-0 shadow-sm">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-pizarra">Correo Electrónico</h4>
+                  <p class="text-gray-600">
+                    <a href="mailto:ajedrezalcala@gmail.com" class="hover:text-granate transition font-bold text-granate">ajedrezalcala@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px] border-4 border-white">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6882040492565!2d-3.3538447999999996!3d40.4821624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42493faac0e331%3A0x41541e96db2806ab!2sCasa%20de%20la%20Juventud!5e0!3m2!1ses!2ses!4v1773410200461!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="escuela" class="py-24 bg-pizarra text-white relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="escuela" class="relative bg-pizarra text-white overflow-hidden">
+      <!-- Imagen de cabecera de sección -->
+      <div class="h-64 md:h-80 w-full relative overflow-hidden">
+        <img src="assets/escuela_header.png" alt="Escuela de Ajedrez" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-pizarra via-transparent to-black/30"></div>
+      </div>
+
+      <div class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <span class="text-oro font-bold tracking-widest uppercase text-sm mb-2 block">La Cantera</span>
-          <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Escuela de Ajedrez</h2>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Escuela de Ajedrez</h2>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Un programa intensivo, progresivo y metódico para aprender, progresar y disfrutar del deporte ciencia. 
+            Grupos reducidos para una enseñanza personalizada.
+          </p>
         </div>
+
         <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+          <!-- Columna Izquierda: Botones de Niveles -->
           <div class="md:col-span-4 flex flex-col gap-3" role="tablist">
-            <button
-              class="tab-btn active w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300"
-              data-tab="nivel-1">1. Iniciación</button>
-            <button
-              class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300"
-              data-tab="nivel-2">2. Tecnificación I</button>
-            <button
-              class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300"
-              data-tab="info">Información</button>
+            <button class="tab-btn active w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-all hover:pl-8 active:scale-95" data-tab="nivel-iniciacion">
+              <span class="text-oro mr-2">01.</span> Iniciación
+            </button>
+            <button class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-all hover:pl-8 active:scale-95" data-tab="nivel-tecnificacion-1">
+              <span class="text-oro mr-2">02.</span> Tecnificación I
+            </button>
+            <button class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-all hover:pl-8 active:scale-95" data-tab="nivel-tecnificacion-2">
+              <span class="text-oro mr-2">03.</span> Tecnificación II
+            </button>
+            <button class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-all hover:pl-8 active:scale-95" data-tab="nivel-tecnificacion-3">
+              <span class="text-oro mr-2">04.</span> Tecnificación III
+            </button>
+            <button class="tab-btn w-full text-left px-6 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 transition-all hover:pl-8 active:scale-95" data-tab="info-escuela">
+              <span class="text-oro mr-2">i.</span> Información y Cuotas
+            </button>
           </div>
+
+          <!-- Columna Derecha: Paneles de Contenido -->
           <div class="md:col-span-8">
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl">
-              <div id="nivel-1" class="tab-panel active">
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl h-full">
+              
+              <!-- Nivel Iniciación -->
+              <div id="nivel-iniciacion" class="tab-content transition-opacity duration-300 block">
                 <h3 class="text-3xl font-serif font-bold text-white mb-4">Nivel Iniciación</h3>
-                <p class="text-gray-300 mb-8">Introducción a las reglas básicas, movimiento de piezas y conceptos elementales del juego para los más pequeños.</p>
-              </div>
-              <div id="nivel-2" class="tab-panel">
-                <h3 class="text-3xl font-serif font-bold text-white mb-4">Tecnificación Nivel I</h3>
-                <p class="text-gray-300 mb-8">Programa metódico de entrenamiento táctico para mejorar la capacidad de cálculo y estrategia en el tablero.</p>
-              </div>
-              <div id="info" class="tab-panel">
-                <h3 class="text-3xl font-serif font-bold text-white mb-4">Información de la Escuela</h3>
-                <div class="text-gray-300 space-y-4 mb-8">
-                  <p><strong>Profesor:</strong> Jesús</p>
-                  <p>Si estás interesado en unirte o recibir más información sobre nuestras clases, puedes contactar con nosotros en:</p>
-                  <a href="mailto:ajedrezalcala@gmail.com" class="text-oro font-bold hover:underline">📩 ajedrezalcala@gmail.com</a>
-                  
-                  <div class="pt-4 mt-4 border-t border-white/10">
-                    <p class="mb-3 text-sm text-gray-400">Para formalizar la matrícula necesitas la Orden SEPA:</p>
-                    <a href="https://drive.google.com/open?id=0BztVoQU2EjeKR3Mta2N4b0w2dDg" target="_blank" class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white font-bold hover:bg-white/20 transition border border-white/20">
-                      📄 Descargar ORDEN SEPA
-                    </a>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                  Introducción a las reglas del juego y conceptos elementales. Se aportan conocimientos básicos que todo jugador novel debe dominar a la perfección. Grupos formados por edades homogéneas.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm mb-8">
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Duración</span>
+                    <span class="font-bold">1 hora / semana</span>
+                  </div>
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Horarios</span>
+                    <span class="font-bold">L, M, X o J (17:00 a 18:00)</span>
                   </div>
                 </div>
               </div>
+
+              <!-- Tecnificación I -->
+              <div id="nivel-tecnificacion-1" class="tab-content transition-opacity duration-300 hidden">
+                <h3 class="text-3xl font-serif font-bold text-white mb-4">Tecnificación Nivel I</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                  Programa de entrenamiento táctico estructurado y metódico. Incrementa notablemente la capacidad de cálculo y visión táctica inmediata de cada alumno.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm mb-8">
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Duración</span>
+                    <span class="font-bold">1.5 horas / semana</span>
+                  </div>
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Horarios</span>
+                    <span class="font-bold">X, V (Tarde) o S (Mañana)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tecnificación II -->
+              <div id="nivel-tecnificacion-2" class="tab-content transition-opacity duration-300 hidden">
+                <h3 class="text-3xl font-serif font-bold text-white mb-4">Tecnificación Nivel II</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                  Iniciación a los conceptos básicos del ajedrez estratégico y comprensión posicional. Entrenamiento enfocado a la toma de decisiones a largo plazo.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm mb-8">
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Duración</span>
+                    <span class="font-bold">2 horas / semana</span>
+                  </div>
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Horarios</span>
+                    <span class="font-bold">L, M o V (18:00 a 20:00)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tecnificación III -->
+              <div id="nivel-tecnificacion-3" class="tab-content transition-opacity duration-300 hidden">
+                <h3 class="text-3xl font-serif font-bold text-white mb-4">Tecnificación Nivel III</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                  Última fase del programa. Análisis profundo del juego, pautas de preparación profesional y elaboración de un repertorio de aperturas personalizado.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm mb-8">
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Duración</span>
+                    <span class="font-bold">4 horas / semana</span>
+                  </div>
+                  <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <span class="text-oro block mb-1 uppercase tracking-widest text-[0.65rem] font-bold">Horarios</span>
+                    <span class="font-bold">J (19:00-21:00) + S (12:00-14:00)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Información y Cuotas -->
+              <div id="info-escuela" class="tab-content transition-opacity duration-300 hidden">
+                <h3 class="text-3xl font-serif font-bold text-white mb-4">Cuotas y Matrícula</h3>
+                <div class="space-y-4 mb-8">
+                  <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span class="text-gray-400">Iniciación</span>
+                    <span class="font-bold text-oro">15 €/mes</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span class="text-gray-400">Tecnificación Nivel 1</span>
+                    <span class="font-bold text-oro">22 €/mes</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span class="text-gray-400">Tecnificación Nivel 2</span>
+                    <span class="font-bold text-oro">28 €/mes</span>
+                  </div>
+                  <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span class="text-gray-400">Tecnificación Nivel 3</span>
+                    <span class="font-bold text-oro">46 €/mes</span>
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <a href="https://drive.google.com/open?id=0BztVoQU2EjeKR3Mta2N4b0w2dDg" target="_blank" class="inline-flex items-center gap-2 bg-oro px-6 py-3 rounded-xl text-white font-bold hover:bg-oro-dark transition-all">
+                    📄 Descargar ORDEN SEPA
+                  </a>
+                  <p class="mt-4 text-xs text-gray-400 italic">Envía el documento relleno a: ajedrezalcala@gmail.com</p>
+                </div>
+              </div>
+
             </div>
+          </div>
+        </div>
+
+        <!-- Tabla de Horarios Semanal -->
+        <div class="mt-24">
+          <h3 class="text-2xl font-serif font-bold text-white mb-8 text-center italic">Cuadrícula Semanal de Clases</h3>
+          <div class="overflow-x-auto rounded-3xl border border-white/10">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="bg-white/10 text-oro uppercase tracking-widest text-[0.7rem] font-bold">
+                  <th class="p-6">LUNES</th>
+                  <th class="p-6">MARTES</th>
+                  <th class="p-6">MIÉRCOLES</th>
+                  <th class="p-6">JUEVES</th>
+                  <th class="p-6">VIERNES</th>
+                  <th class="p-6">SÁBADO</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5">
+                <tr class="bg-white/5">
+                  <!-- Lunes -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Iniciación</div>
+                    <div class="text-xs text-gray-400">17:00 a 18:00</div>
+                  </td>
+                  <!-- Martes -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Iniciación</div>
+                    <div class="text-xs text-gray-400">17:00 a 18:00</div>
+                  </td>
+                  <!-- Miercoles -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Iniciación</div>
+                    <div class="text-xs text-gray-400">17:00 a 18:00</div>
+                    <div class="mt-3 font-bold mb-1 border-t border-white/10 pt-3">Nivel 1</div>
+                    <div class="text-xs text-gray-400">18:00 a 19:30</div>
+                  </td>
+                  <!-- Jueves -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Iniciación</div>
+                    <div class="text-xs text-gray-400">17:00 a 18:00</div>
+                  </td>
+                  <!-- Viernes -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Nivel 1</div>
+                    <div class="text-xs text-gray-400">16:30 a 18:00</div>
+                  </td>
+                  <!-- Sabado -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1 text-oro">Nivel 1</div>
+                    <div class="text-xs text-gray-400">10:30 a 12:00</div>
+                  </td>
+                </tr>
+                <tr>
+                  <!-- Lunes -->
+                  <td class="p-6 bg-white/5">
+                    <div class="font-bold mb-1">Nivel 2</div>
+                    <div class="text-xs text-gray-400">18:00 a 20:00</div>
+                  </td>
+                  <!-- Martes -->
+                  <td class="p-6 bg-white/5">
+                    <div class="font-bold mb-1">Nivel 2</div>
+                    <div class="text-xs text-gray-400">18:00 a 20:00</div>
+                  </td>
+                  <!-- Miercoles -->
+                  <td class="p-6">
+                    <div class="font-bold mb-1">Iniciación</div>
+                    <div class="text-xs text-gray-400">18:00 a 19:00</div>
+                  </td>
+                  <!-- Jueves -->
+                  <td class="p-6 bg-white/10">
+                    <div class="font-bold mb-1 text-oro">Nivel 3 (Tact.)</div>
+                    <div class="text-xs text-gray-400">19:00 a 21:00</div>
+                  </td>
+                  <!-- Viernes -->
+                  <td class="p-6 bg-white/5">
+                    <div class="font-bold mb-1">Nivel 2</div>
+                    <div class="text-xs text-gray-400">18:00 a 20:00</div>
+                  </td>
+                  <!-- Sabado -->
+                  <td class="p-6 bg-white/10">
+                    <div class="font-bold mb-1 text-oro">Nivel 3 (Teo.)</div>
+                    <div class="text-xs text-gray-400">12:00 a 14:00</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Competiciones -->
+        <div class="mt-24 grid md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-white/10 to-transparent p-8 rounded-3xl border border-white/10">
+            <h4 class="font-serif font-bold text-xl mb-4 text-oro">Liga Infantil FMA</h4>
+            <p class="text-sm text-gray-300 leading-relaxed">Octubre a Enero. Sábados mañana. Campeonato autonómico por equipos infantiles.</p>
+          </div>
+          <div class="bg-gradient-to-br from-white/10 to-transparent p-8 rounded-3xl border border-white/10">
+            <h4 class="font-serif font-bold text-xl mb-4 text-oro">Liga Senior</h4>
+            <p class="text-sm text-gray-300 leading-relaxed">Octubre a Marzo. Domingos mañana. Valedero para ELO internacional. Todas las edades.</p>
+          </div>
+          <div class="bg-gradient-to-br from-white/10 to-transparent p-8 rounded-3xl border border-white/10">
+            <h4 class="font-serif font-bold text-xl mb-4 text-oro">Escolares CAM</h4>
+            <p class="text-sm text-gray-300 leading-relaxed">Fases preliminares en Marzo. Reúne a los mejores jugadores de cada categoría de Madrid.</p>
           </div>
         </div>
       </div>
@@ -913,17 +1207,24 @@
 
     // Pestañas Escuela
     const tabs = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
+    const contents = document.querySelectorAll('.tab-content');
     tabs.forEach(btn => {
       btn.addEventListener('click', () => {
         tabs.forEach(b => {
-          b.classList.remove('active', 'bg-gradient-to-r', 'from-granate', 'to-granate-dark', 'text-white', 'border-transparent');
+          b.classList.remove('active', 'bg-oro', 'text-white', 'border-oro');
           b.classList.add('bg-white/5', 'text-gray-300');
         });
-        panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
+        contents.forEach(c => {
+          c.classList.add('hidden');
+          c.classList.remove('block');
+        });
+        
+        btn.classList.add('active', 'bg-oro', 'text-white', 'border-oro');
         btn.classList.remove('bg-white/5', 'text-gray-300');
-        document.getElementById(btn.dataset.tab).classList.add('active');
+        
+        const activeContent = document.getElementById(btn.dataset.tab);
+        activeContent.classList.remove('hidden');
+        activeContent.classList.add('block');
       });
     });
 
