@@ -191,10 +191,8 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(82, 18, 18, 0.4), rgba(64, 14, 14, 0.25));
+      background: linear-gradient(to bottom, rgba(45, 30, 30, 0.65), rgba(35, 25, 25, 0.45));
       z-index: 1;
-      /* Forma exacta de la onda inferior para que el overlay no tape la zona clara */
-      clip-path: path('M0,0 L1440,0 L1440,91 L1392,85.3 C1344,80,1248,69,1152,58.7 C1056,48,960,37,864,42.7 C768,48,672,69,576,80 C480,91,384,91,288,85.3 C192,80,96,70,48,65 L0,60 Z');
     }
 
     /* Tarjetas de Noticias Dinámicas */
@@ -671,7 +669,7 @@
         </div>
       </div>
 
-      <div class="absolute bottom-0 w-full">
+      <div class="absolute bottom-0 w-full z-10">
         <svg viewBox="0 0 1440 120" class="w-full h-auto text-marfil fill-current" preserveAspectRatio="none">
           <path
             d="M0,60L48,65C96,70,192,80,288,85.3C384,91,480,91,576,80C672,69,768,48,864,42.7C960,37,1056,48,1152,58.7C1248,69,1344,80,1392,85.3L1440,91L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z">
