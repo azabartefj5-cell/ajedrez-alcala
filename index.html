@@ -26,10 +26,10 @@
           },
           colors: {
             granate: {
-              DEFAULT: '#7a1f2b',
-              dark: '#5f1821',
-              light: '#9a2a39',
-              soft: 'rgba(122, 31, 43, 0.08)'
+              DEFAULT: '#8d0c1a',
+              dark: '#6e0914',
+              light: '#a81020',
+              soft: 'rgba(141, 12, 26, 0.08)'
             },
             oro: {
               DEFAULT: '#b38b59',
@@ -92,7 +92,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(78, 20, 20, 0.7), rgba(64, 14, 14, 0.7));
+      background: linear-gradient(to bottom, rgba(141, 12, 26, 0.55), rgba(110, 9, 20, 0.55));
       z-index: 1;
       pointer-events: none;
     }
@@ -125,7 +125,7 @@
       width: 80%;
       max-width: 300px;
       height: 100vh;
-      background-color: #4e1c1c;
+      background-color: #8d0c1a;
       z-index: 100;
       transition: right 0.3s ease-in-out;
       padding: 2rem;
@@ -202,7 +202,7 @@
 
     .news-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(122, 31, 43, 0.12);
+      box-shadow: 0 20px 40px rgba(141, 12, 26, 0.12);
     }
 
     .img-zoom {
@@ -228,7 +228,7 @@
       line-height: 0.85;
       padding-right: 10px;
       padding-top: 4px;
-      color: #7a1f2b;
+      color: #8d0c1a;
       font-weight: 900;
     }
 
@@ -237,10 +237,10 @@
       font-size: 1.6rem;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      color: #7a1f2b;
+      color: #8d0c1a;
       font-weight: 700;
       padding-bottom: 8px;
-      border-bottom: 2px solid rgba(122, 31, 43, 0.1);
+      border-bottom: 2px solid rgba(141, 12, 26, 0.1);
     }
 
     .prose strong {
@@ -252,7 +252,7 @@
       border-left: 4px solid #b38b59;
       padding: 20px 24px;
       font-style: italic;
-      color: #5f1821;
+      color: #6e0914;
       background: linear-gradient(135deg, rgba(179, 139, 89, 0.06), rgba(179, 139, 89, 0.02));
       border-radius: 0 12px 12px 0;
       margin: 2em 0;
@@ -333,7 +333,7 @@
     }
 
     .prose .results-table thead {
-      background: linear-gradient(135deg, #7a1f2b, #5f1821);
+      background: linear-gradient(135deg, #8d0c1a, #6e0914);
     }
 
     .prose .results-table th {
@@ -356,7 +356,7 @@
     }
 
     .prose .results-table tbody tr:hover td {
-      background: rgba(122, 31, 43, 0.04);
+      background: rgba(141, 12, 26, 0.04);
     }
 
     .prose .prizes-block {
@@ -401,7 +401,7 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      border: 2px solid rgba(122, 31, 43, 0.15);
+      border: 2px solid rgba(141, 12, 26, 0.15);
       background: white;
       color: #22252a;
       font-weight: 700;
@@ -412,17 +412,17 @@
     }
 
     .pagination button:hover {
-      border-color: #7a1f2b;
-      color: #7a1f2b;
+      border-color: #8d0c1a;
+      color: #8d0c1a;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(122, 31, 43, 0.15);
+      box-shadow: 0 4px 12px rgba(141, 12, 26, 0.15);
     }
 
     .pagination button.active {
-      background: linear-gradient(135deg, #7a1f2b, #5f1821);
+      background: linear-gradient(135deg, #8d0c1a, #6e0914);
       color: white;
       border-color: transparent;
-      box-shadow: 0 4px 16px rgba(122, 31, 43, 0.3);
+      box-shadow: 0 4px 16px rgba(141, 12, 26, 0.3);
     }
 
     .pagination button.nav-btn {
@@ -484,7 +484,7 @@
 
     /* Pestañas Escuela */
     .tab-btn.active {
-      background: linear-gradient(135deg, #7a1f2b, #5f1821);
+      background: linear-gradient(135deg, #8d0c1a, #6e0914);
       color: white;
       border-color: transparent;
     }
@@ -512,8 +512,8 @@
 
     /* Loader */
     .loader {
-      border: 3px solid rgba(122, 31, 43, 0.2);
-      border-top: 3px solid #7a1f2b;
+      border: 3px solid rgba(141, 12, 26, 0.2);
+      border-top: 3px solid #8d0c1a;
       border-radius: 50%;
       width: 20px;
       height: 20px;
@@ -543,19 +543,19 @@
         <a href="#inicio" class="flex items-center gap-3 group shrink-0">
           <img src="assets/logo.png" alt="Club de Ajedrez Alcalá" class="nav-logo-img">
           <div class="flex flex-col">
-            <span class="text-[0.7rem] uppercase tracking-widest text-gray-300 font-bold">Alcalá de Henares</span>
-            <span class="font-serif font-bold text-lg text-white leading-tight">Club de Ajedrez</span>
+            <span class="text-[0.7rem] uppercase tracking-widest text-gray-300 font-bold drop-shadow-md">Alcalá de Henares</span>
+            <span class="font-serif font-bold text-lg text-white leading-tight drop-shadow-md">Club de Ajedrez</span>
           </div>
         </a>
 
         <!-- Menú a la derecha -->
         <nav class="hidden md:flex items-center gap-8 shrink-0">
-          <a href="#club" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10">El Club</a>
-          <a href="#escuela" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10">Escuela</a>
-          <a href="#noticias" class="text-sm font-semibold text-white/90 hover:text-oro transition relative z-10"
+          <a href="#club" class="px-3 py-2 text-sm font-bold text-white/90 hover:text-white hover:bg-white/20 hover:backdrop-blur-md rounded-lg transition-all duration-300 relative z-10 drop-shadow-md">El Club</a>
+          <a href="#escuela" class="px-3 py-2 text-sm font-bold text-white/90 hover:text-white hover:bg-white/20 hover:backdrop-blur-md rounded-lg transition-all duration-300 relative z-10 drop-shadow-md">Escuela</a>
+          <a href="#noticias" class="px-3 py-2 text-sm font-bold text-white/90 hover:text-white hover:bg-white/20 hover:backdrop-blur-md rounded-lg transition-all duration-300 relative z-10 drop-shadow-md"
             onclick="closeArticleView()">Noticias</a>
-          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="text-sm font-semibold text-white/50 hover:text-oro transition relative z-10" title="Panel de Administración">⚙️ Admin</a>
-          <a href="#contacto" class="btn-cta text-sm relative z-10">
+          <a href="https://ajedrez-alcala-backend.vercel.app/admin" target="_blank" class="px-3 py-2 text-sm font-bold text-white/60 hover:text-white hover:bg-white/20 hover:backdrop-blur-md rounded-lg transition-all duration-300 relative z-10 drop-shadow-md" title="Panel de Administración">⚙️ Admin</a>
+          <a href="#contacto" class="btn-cta text-sm relative z-10 hover:scale-105">
             Hazte Socio
           </a>
         </nav>
@@ -630,7 +630,7 @@
           </div>
 
           <div class="lg:col-span-5 hidden md:block">
-            <div class="bg-[rgba(78,28,28,0.95)] backdrop-blur-xl border border-oro/30 rounded-3xl p-8 shadow-2xl">
+            <div class="bg-[rgba(141,12,26,0.95)] backdrop-blur-xl border border-oro/30 rounded-3xl p-8 shadow-2xl">
               <h3 class="text-xl font-serif font-bold text-white mb-6 border-b border-white/20 pb-4">Acceso Rápido</h3>
               <ul class="space-y-5">
                 <li class="flex items-start gap-4">
