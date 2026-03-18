@@ -607,11 +607,11 @@
               <span class="w-2 h-2 rounded-full bg-oro animate-pulse"></span>
               Comunidad, formación y competición
             </div>
-            <h1
-              class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-marfil">
+            <h1 id="heroTitle"
+              class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-marfil pb-4">
               Jaque Mate a<br>la rutina.
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light leading-relaxed">
+            <p id="heroSubtitle" class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light leading-relaxed">
               Desde la primera regla hasta la alta competición. Únete al centro neurálgico del ajedrez en Alcalá de
               Henares y forma parte de nuestra historia.
             </p>
@@ -620,10 +620,6 @@
                 class="bg-oro text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all border border-white/20"
                 onclick="closeArticleView()">
                 Últimas Noticias
-              </a>
-              <a href="#escuela"
-                class="bg-granate text-white px-8 py-4 rounded-full font-bold border border-white/20 hover:bg-granate-dark transition-all">
-                Escuela Infantil
               </a>
             </div>
           </div>
@@ -1227,6 +1223,40 @@
         }, 400);
       }
     }
+
+    // Mensajes motivacionales aleatorios
+    const heroMessages = [
+      {
+        title: "Jaque Mate a<br>la rutina.",
+        subtitle: "Desde la primera regla hasta la alta competición. Únete al centro neurálgico del ajedrez en Alcalá de Henares y forma parte de nuestra historia."
+      },
+      {
+        title: "Tu próximo gran<br>movimiento.",
+        subtitle: "Desarrolla tu mente, haz nuevos amigos y disfruta de la competición en el corazón de Alcalá."
+      },
+      {
+        title: "Una familia en<br>blanco y negro.",
+        subtitle: "Comparte tu pasión por el ajedrez con jugadores de todos los niveles en un ambiente inmejorable."
+      },
+      {
+        title: "Domina el centro,<br>domina tu mente.",
+        subtitle: "Aprende estrategia, táctica y paciencia, rodeado de grandes jugadores y compañeros de tablero."
+      },
+      {
+        title: "El tablero espera<br>tu jugada.",
+        subtitle: "Un espacio donde cada partida es una lección y cada jugador es bienvenido, sin importar su nivel."
+      }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const hTitle = document.getElementById('heroTitle');
+      const hSub = document.getElementById('heroSubtitle');
+      if (hTitle && hSub) {
+        const randomMsg = heroMessages[Math.floor(Math.random() * heroMessages.length)];
+        hTitle.innerHTML = randomMsg.title;
+        hSub.innerHTML = randomMsg.subtitle;
+      }
+    });
   </script>
 
   <script type="module">
